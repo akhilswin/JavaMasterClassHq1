@@ -23,6 +23,18 @@ class MainClassTest {
 	}
 
 	@Test
+	public void testExceptionConditon() throws Exception {
+
+		TestUtils.yakshaAssert(TestUtils.currentTest(), true, TestUtils.boundaryTestFile);
+	}
+
+	@Test
+	public void testBoundaryCondition() throws Exception {
+
+		TestUtils.yakshaAssert(TestUtils.currentTest(), true, TestUtils.exceptionTestFile);
+	}
+
+	@Test
 	void testMakePayment() throws Exception {
 		// Test will pass
 		OnlineBanking onlineBanking1 = new OnlineBanking(12560.00, "icici");
